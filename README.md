@@ -27,7 +27,7 @@ The data was webscraped from Truecar.com, an online car marketplace that posts n
 | Location | Categorical | Where the car is listed for sale |
 | Accidents | Numerical | Amount of accidents on car's title |
 
-<img src="images/scatter_matrix_plot.png" width="500" height="500">
+<img src="images/scatter_matrix_plot.png" width="1200" height="800">
 
 ## Results
 
@@ -35,14 +35,14 @@ Notebook can be found [here](https://github.com/lukenew2/car-leases/blob/master/
 
 My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that an improve performance by a small margin through using Polynomial Regression.  However, two models performed significantly better than the linear models.  Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more through an ensemble of the two.  My final model was a Voting Regressor between Random Forest and Gradinet Boosting Regressors.
 
-<img src="images/best_models_box_plot_scores.png" width="500" height="500">
+<img src="images/best_models_box_plot_scores.png" width="800" height="600">
 
 To see how my models errors looked like I graphed predicted values vs actual values. If my model was perfect all points would lie on the diagonal.  My model seemed to perform well for the entire range of values.  
 
-<img src="images/actual_vs_predicted_price.png" width="500" height="500">
+<img src="images/actual_vs_predicted_price.png" width="800" height="600">
 
 ## Conclusion
 
 Here I plotted my final model's predicted depreciation cost of three different trims of the Acura TLX (in red) along with the cost of the respective lease (in blue).  The predicted depreciations have 95% confidence intervals shaded in around them.  As you can see it turns out leasing a car is a lot more expensive than buying and reselling a car in all three cases.  As always, thanks for viewing the project and I hope it was insightful and enjoyable!
 
-<img src="images/depreciation_vs_cost_of_lease.png" width="500" height="500">
+<img src="images/depreciation_vs_cost_of_lease.png" width="1300" height="400">
