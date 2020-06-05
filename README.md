@@ -2,7 +2,7 @@
 
 ## Project Goal
 
-In this project I aim to determine whether car leases are a good deal by comparing the depreciation cost of cars with the cost of a lease. Using machine learning I built a model that can predict the residual value of cars with which I use to predict the cost of buying a new car and reselling it X years later where X is the amount of years in the term of lease.
+In this project I aim to determine whether car leases are a good deal by comparing the depreciation cost of cars with the cost of a lease. Using machine learning I built a model that can predict the residual value of cars and I use it to predict the cost of buying a new car and reselling it X years later where X is the amount of years in the term of lease.
 
 If the cost of lease is significantly greater than the predicted cost of buying and reselling a new car I can conclude that leases are not worth it.  However, if the cost of lease is less than the cost of buying and reselling a new car I can conclude that leases are in fact a good deal.
 
@@ -36,13 +36,13 @@ The data was webscraped from Truecar.com, an online car marketplace that posts n
 
 Notebook complete with code can be found [here](https://github.com/lukenew2/car-leases/blob/master/buy_or_lease.ipynb).
 
-My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that an improve performance by a small margin through using Polynomial Regression.  However, two models performed significantly better than the linear models.  Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more through an ensemble of the two.  My final model was a Voting Regressor between Random Forest and Gradient Boosting Regressors.
+My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that and improve performance by a small margin by using Polynomial Regression.  However, two models performed significantly better than the linear models, Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more by taking the average prediction of the two.  
 
 <p align="center"> 
 <img src="images/best_models_box_plot_scores.png" width="600" height="450"/>
 </p>
 
-To see how my models errors looked like I graphed predicted values vs actual values. If my model was perfect all points would lie on the diagonal.  My model seemed to perform well for the entire range of values.  
+To see what my models errors looked like I graphed predicted values vs actual values. If my model was perfect all points would lie on the diagonal.  My model seemed to perform well for the entire range of values.  
 
 <p align="center"> 
 <img src="images/actual_vs_predicted_price.png" width="600" height="450"/>
