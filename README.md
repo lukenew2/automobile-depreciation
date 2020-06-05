@@ -15,7 +15,7 @@ I used RMSE because it gives an idea of how much error the system typically make
 To simplify the project I gathered data on one specific make and model, the Acura TLX.  The Acura TLX is one of the best rated cars to lease because of its super low monthly payments.  It is the perfect example to model for this project and if I can conclude that it is better to buy and resell an Acura TLX than to lease I can conclude the same for lower rated cars (since they are worst deals).
 
 The data was webscraped from Truecar.com, an online car marketplace that posts new and used car listings being sold across the United States. Code can be found in another notebook [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb). 
-
+<p align="center">
 | Column Name | Type | Description | 
 | --- | --- | --- |
 | Year | Numerical | Year made |
@@ -26,25 +26,26 @@ The data was webscraped from Truecar.com, an online car marketplace that posts n
 | Trim | Categorical | Contains info on performance package |
 | Location | Categorical | Where the car is listed for sale |
 | Accidents | Numerical | Amount of accidents on car's title |
+</p>
 
 <p align="center"> 
-<img src="images/scatter_matrix_plot.png" width="900" height="600"/>
+<img src="images/scatter_matrix_plot.png" width="600" height="400"/>
 </p>
 
 ## Results
 
 Notebook complete with code can be found [here](https://github.com/lukenew2/car-leases/blob/master/buy_or_lease.ipynb).
 
-My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that an improve performance by a small margin through using Polynomial Regression.  However, two models performed significantly better than the linear models.  Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more through an ensemble of the two.  My final model was a Voting Regressor between Random Forest and Gradinet Boosting Regressors.
+My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that an improve performance by a small margin through using Polynomial Regression.  However, two models performed significantly better than the linear models.  Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more through an ensemble of the two.  My final model was a Voting Regressor between Random Forest and Gradient Boosting Regressors.
 
 <p align="center"> 
-<img src="images/best_models_box_plot_scores.png" width="400" height="300"/>
+<img src="images/best_models_box_plot_scores.png" width="600" height="450"/>
 </p>
 
 To see how my models errors looked like I graphed predicted values vs actual values. If my model was perfect all points would lie on the diagonal.  My model seemed to perform well for the entire range of values.  
 
 <p align="center"> 
-<img src="images/actual_vs_predicted_price.png" width="400" height="300"/>
+<img src="images/actual_vs_predicted_price.png" width="600" height="450"/>
 </p>
 
 ## Conclusion
