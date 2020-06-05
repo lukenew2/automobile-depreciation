@@ -16,6 +16,8 @@ To simplify the project I gathered data on one specific make and model, the Acur
 
 The data was webscraped from Truecar.com, an online car marketplace that posts new and used car listings being sold across the United States. Code can be found in another notebook [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb). 
 
+Here is the list of column names, their data type, and a short description that were used in the project:
+
 | Column Name | Type | Description | 
 | --- | --- | --- |
 | Year | Numerical | Year made |
@@ -27,6 +29,7 @@ The data was webscraped from Truecar.com, an online car marketplace that posts n
 | Location | Categorical | Where the car is listed for sale |
 | Accidents | Numerical | Amount of accidents on car's title |
 
+The numerical attributes held strong correlations giving good predictive power.  Especially the Year and Mileage attributes.
 
 <p align="center"> 
 <img src="images/scatter_matrix_plot.png" width="600" height="400"/>
