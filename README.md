@@ -15,7 +15,7 @@ I used RMSE because it gives an idea of how much error the system typically make
 To simplify the project I gathered data on one specific make and model, the Acura TLX.  The Acura TLX is one of the best rated cars to lease because of its super low monthly payments.  It is the perfect example to model for this project and if I can conclude that it is better to buy and resell an Acura TLX than to lease I can conclude the same for lower rated cars (since they are worst deals).
 
 The data was webscraped from Truecar.com, an online car marketplace that posts new and used car listings being sold across the United States. Code can be found in another notebook [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb). 
-<p align="center">
+
 | Column Name | Type | Description | 
 | --- | --- | --- |
 | Year | Numerical | Year made |
@@ -26,7 +26,7 @@ The data was webscraped from Truecar.com, an online car marketplace that posts n
 | Trim | Categorical | Contains info on performance package |
 | Location | Categorical | Where the car is listed for sale |
 | Accidents | Numerical | Amount of accidents on car's title |
-</p>
+
 
 <p align="center"> 
 <img src="images/scatter_matrix_plot.png" width="600" height="400"/>
