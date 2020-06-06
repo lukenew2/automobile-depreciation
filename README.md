@@ -41,6 +41,8 @@ Notebook complete with code can be found [here](https://github.com/lukenew2/car-
 
 My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that and improve performance by a small margin by using Polynomial Regression.  However, two models performed significantly better than the linear models, Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more by taking the average prediction of the two.  
 
+The figure below shows the 4 best model's performance score (RMSE) over 10 different folds on the training set.  Using boxplots we can easily see the mean, interquartile range, and min/max scores across all folds. 
+
 <p align="center"> 
 <img src="images/best_models_box_plot_scores.png" width="600" height="450"/>
 </p>
@@ -53,7 +55,7 @@ To see what my models errors looked like I graphed predicted values vs actual va
 
 ## Conclusion
 
-Here I plotted my final model's predicted depreciation cost of three different trims of the Acura TLX (in red) along with the cost of the respective lease (in blue).  The predicted depreciations have 95% confidence intervals shaded in around them.  As you can see it turns out leasing a car is a lot more expensive than buying and reselling a car in all three cases.  As always, thanks for viewing the project and I hope it was insightful and enjoyable!
+In the figure below I plotted my final model's predicted depreciation cost of three different trims of the Acura TLX (in red) along with the cost of the respective lease (in blue).  The predicted depreciations have 95% confidence intervals shaded in around them.  As you can see it turns out leasing a car is a lot more expensive than buying and reselling a car in all three cases.  As always, thanks for viewing the project and I hope it was insightful and enjoyable!
 
 <p align="center"> 
 <img align="center" src="images/depreciation_vs_cost_of_lease.png" width="1300" height="400"/>
