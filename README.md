@@ -1,4 +1,4 @@
-# Should you Buy or Lease your Next Car? End-to-End Data Science Project
+# Should you Buy or Lease your Next Car?
 
 ## Project Goal
 
