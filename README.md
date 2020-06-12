@@ -1,20 +1,18 @@
-# Buy or Lease: Predicting Residual Value of Cars
+# Should you Buy or Lease your Next Car? End-to-End Data Science Project
 
 ## Project Goal
 
-In this project I aim to determine whether car leases are a good deal by comparing the depreciation cost of cars with the cost of a lease. Using machine learning I built a model that can predict the residual value of cars and I use it to predict the cost of buying a new car and reselling it X years later where X is the amount of years in the term of lease.
+The goal of this project is to determine whether car leases are a good deal by comparing the total expense of a lease with the depreciation cost of a car. If the lease is more expensive we can conclude that it is more cost effective to buy the car new and resell it. However, if the lease is less expensive than we conclude you should lease instead of buy. 
 
-If the cost of lease is significantly greater than the predicted cost of buying and reselling a new car I can conclude that leases are not worth it.  However, if the cost of lease is less than the cost of buying and reselling a new car I can conclude that leases are in fact a good deal.
+By using Machine Learning we predict the price of cars and use it to calculate the depreciation cost with which we compare to the cost of its lease. 
 
-**Metric**: Root Mean Square Error (RMSE)
-
-I used RMSE because it gives an idea of how much error the system typically makes in its predictions, with a higher weight for larger errors. This metric will help me determine whether the cost of lease is signifcantly greater than the cost of buying and reselling.  If the cost of lease is within the error of our prediction I cannot determine whether you should buy or lease.
+The metric we use is Root-Mean-Squared-Error (RMSE) because it gives an idea of how much error the system typically makes in its predictions, with a higher weight for large errors.
 
 ## The Data
 
-To simplify the project I gathered data on one specific make and model, the Acura TLX.  The Acura TLX is one of the best rated cars to lease because of its super low monthly payments.  It is the perfect example to model for this project and if I can conclude that it is better to buy and resell an Acura TLX than to lease I can conclude the same for lower rated cars (since they are worst deals).
+Instead of collecting data on hundreds of different cars we only collect data on one of the best rated cars to lease, the Acura TLX. This helps us simplify the problem and if we conclude that you should buy instead of lease this car, we can conclude the same for lower rated cars.
 
-The data was webscraped from Truecar.com, an online car marketplace that posts new and used car listings being sold across the United States. Code can be found in another notebook [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb). 
+In this project we collect our data using BeautifulSoup's library. We webscrape Acura TLX car listings off of Truecar.com. The notebook complete with code used for webscraping can be found [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb). 
 
 Here is the list of column names, their data type, and a short description that were used in the project:
 
@@ -29,7 +27,7 @@ Here is the list of column names, their data type, and a short description that 
 | Location | Categorical | Where the car is listed for sale |
 | Accidents | Numerical | Amount of accidents on car's title |
 
-The numerical attributes held strong correlations giving good predictive power.  Especially the Year and Mileage attributes.
+To check for correlation between attributes we use pandas scatter_matrix() function, which plots every numerical attribute against every other numerical attribute.
 
 <p align="center"> 
 <img src="images/scatter_matrix_plot.png" width="600" height="400"/>
@@ -39,7 +37,7 @@ The numerical attributes held strong correlations giving good predictive power. 
 
 Notebook complete with code can be found [here](https://github.com/lukenew2/car-leases/blob/master/buy_or_lease.ipynb).
 
-My modeling began with a simple Linear Regression as the base model.  I was able to iterate on top of that and improve performance by a small margin by using Polynomial Regression.  However, two models performed significantly better than the linear models, Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more by taking the average prediction of the two.  
+Our first base model is a Linear Regression with which we will try to improve from.  I was able to iterate on top of that and improve performance by a small margin using Polynomial Regression.  However, two models performed significantly better than the linear models, Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more by creating an ensemble of the two best models averaging the predictions.  
 
 The figure below shows the 4 best model's performance score (RMSE) over 10 different folds on the training set.  Using boxplots we can easily see the mean, interquartile range, and min/max scores across all folds. 
 
@@ -47,16 +45,24 @@ The figure below shows the 4 best model's performance score (RMSE) over 10 diffe
 <img src="images/best_models_box_plot_scores.png" width="600" height="450"/>
 </p>
 
-To see what my models errors looked like I graphed predicted values vs actual values. If my model was perfect all points would lie on the diagonal.  My model seemed to perform well for the entire range of values.  
+To analyze errors of best model we plot our predicted price against the actual price. If all of our points were on the diagonal line that would mean our model is perfect and has an error of 0. 
 
 <p align="center"> 
 <img src="images/actual_vs_predicted_price.png" width="600" height="450"/>
 </p>
 
+This looks pretty good our errors are normally distributed opposed to missing low for one region and high for another.  My model seemed to perform well for the entire range of values.  
+
 ## Conclusion
 
-In the figure below I plotted my final model's predicted depreciation cost of three different trims of the Acura TLX (in red) along with the cost of the respective lease (in blue).  The predicted depreciations have 95% confidence intervals shaded in around them.  As you can see it turns out leasing a car is a lot more expensive than buying and reselling a car in all three cases.  As always, thanks for viewing the project and I hope it was insightful and enjoyable!
+Now back to the original problem. Should you buy or lease your next car? 
+
+Now that we have our final model and performance score on the test set we can use it to predict the prices of Acura TLXs with features corresponding to various leases. The leases we use for comparison are from Acura's website. Let's look at multiple different lease terms and see what we find out!
 
 <p align="center"> 
 <img align="center" src="images/depreciation_vs_cost_of_lease.png" width="1300" height="400"/>
 </p>
+
+The red line represents the predicted depreciation cost while the blue line represents the cost of the lease. The shaded area represents the 95% confidence intervals around our predicted depreciation. We see that in all three cases the lease is a lot more expensive.
+
+You can save up to $10,000 if you choose to buy the car new. Leasing happens to be a lot more expensive even for one of the best rated cars.
