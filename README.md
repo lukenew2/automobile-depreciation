@@ -8,27 +8,6 @@ By using Machine Learning we predict the price of cars and use it to calculate t
 
 The metric we use is Root-Mean-Squared-Error (RMSE) because it gives an idea of how much error the system typically makes in its predictions, with a higher weight for large errors.
 
-## The Data
-
-Instead of collecting data on hundreds of different cars we only collect data on one of the best rated cars to lease, the Acura TLX. This helps us simplify the problem and if we conclude that you should buy instead of lease this car, we can conclude the same for lower rated cars.
-
-In this project we collect our data using BeautifulSoup's library. We webscrape Acura TLX car listings off of Truecar.com. The notebook complete with code used for webscraping can be found [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb). 
-
-Here is the list of column names, their data type, and a short description that were used in the project:
-
-| Column Name | Type | Description | 
-| --- | --- | --- |
-| Year | Numerical | Year made |
-| Price | Numerical | Price of car (target variable) |
-| Mileage | Numerical | Amount of miles the car has been driven |
-| Drive | Categorical | Type of drive (either "FWD" or "SH-AWD") |
-| Engine | Categorical | Type of engine (either "2.4L Inline-4" or "3.5L V-6" |
-| Trim | Categorical | Contains info on performance package |
-| Location | Categorical | Where the car is listed for sale |
-| Accidents | Numerical | Amount of accidents on car's title |
-
-To check for correlation between attributes we use pandas scatter_matrix() function, which plots every numerical attribute against every other numerical attribute.
-
 <p align="center"> 
 <img src="images/methodology.png" />
 </p>
