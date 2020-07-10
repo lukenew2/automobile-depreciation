@@ -1,18 +1,20 @@
-# Should you Buy or Lease your Next Car?
+# Should you Buy or Lease your Next Car
 
-## Project Goal
+# Project Goal
 
 The goal of this project is to determine whether car leases are a good deal by comparing the total expense of a lease with the depreciation cost of a car. If the lease is more expensive we can conclude that it is more cost effective to buy the car new and resell it. However, if the lease is less expensive than we conclude you should lease instead of buy. 
 
 By using Machine Learning we predict the price of cars and use it to calculate the depreciation cost with which we compare to the cost of its lease. 
 
-The metric we use is Root-Mean-Squared-Error (RMSE) because it gives an idea of how much error the system typically makes in its predictions, with a higher weight for large errors.
+The metric we use is Root-Mean-Squared-Error (RMSE) because it gives an idea of how much error the system typically makes in its predictions, with a higher weight for larger errors.
+
+The notebook where we webscrape the data can be found [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb).
 
 <p align="center"> 
 <img src="images/methodology.png" />
 </p>
 
-## Results
+# Results
 
 Notebook complete with code can be found [here](https://github.com/lukenew2/car-leases/blob/master/buy_or_lease.ipynb).
 
@@ -32,7 +34,7 @@ To analyze errors of best model we plot our predicted price against the actual p
 
 This looks pretty good our errors are normally distributed opposed to missing low for one region and high for another.  My model seemed to perform well for the entire range of values.  
 
-## Conclusion
+# Conclusions
 
 Now back to the original problem. Should you buy or lease your next car? 
 
