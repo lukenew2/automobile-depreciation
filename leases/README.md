@@ -8,7 +8,7 @@ By using Machine Learning we predict the price of cars and use it to calculate t
 
 The metric we use is Root-Mean-Squared-Error (RMSE) because it gives an idea of how much error the system typically makes in its predictions, with a higher weight for larger errors.
 
-The notebook where we webscrape the data can be found [here](https://github.com/lukenew2/car-leases/blob/master/collect_data_webscraping.ipynb).
+The notebook where we webscrape the data can be found [here](https://github.com/lukenew2/automobile-depreciation/blob/master/leases/notebooks/collect_data_webscraping.ipynb).
 
 <p align="center"> 
 <img src="images/methodology.png" />
@@ -16,7 +16,7 @@ The notebook where we webscrape the data can be found [here](https://github.com/
 
 # Results
 
-Notebook complete with code can be found [here](https://github.com/lukenew2/car-leases/blob/master/buy_or_lease.ipynb).
+Notebook complete with code can be found [here](https://github.com/lukenew2/automobile-depreciation/blob/master/leases/notebooks/buy_or_lease.ipynb).
 
 Our first base model is a Linear Regression with which we will try to improve from.  I was able to iterate on top of that and improve performance by a small margin using Polynomial Regression.  However, two models performed significantly better than the linear models, Random Forest Regressor and Gradient Boosting Regressor.  I performed grid searches on both to optimize the hyperparameters and was able to boost performance even more by creating an ensemble of the two best models averaging the predictions.  
 
@@ -44,3 +44,5 @@ Now that we have our final model and performance score on the test set we can us
 <img align="center" src="images/conclusion_slide.png" />
 </p>
 
+## Write-Ups
+- [Should you Buy or Lease Your Next Car?](https://towardsdatascience.com/should-you-buy-or-lease-your-next-car-end-to-end-data-science-project-a26617f11fcb)
