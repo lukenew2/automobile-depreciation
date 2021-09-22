@@ -1,7 +1,10 @@
 <h1 align="center"> Automobile Depreciation Analysis </h1>
-<h3 align="center"> A Comparative Study between the Factors Expediting Automobile Depreciation </h3> 
+<h3 align="center"> A Comparative Study between the Expediting Factors of Automobile Depreciation </h3> 
 <p align="center"> 
-  <img src="images/cover_image.jpeg" alt="By Samuele Errico Piccarini on Upsplash" width="240px" height="240px">
+  <figure>
+    <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
+    <figcaption>"By Samuele Errico Piccarini on Upsplash"</figcaption>
+  </figure>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -23,14 +26,14 @@
 <h2 id="about-the-project"> :pencil: About The Project</h2>
 
 <p align="justify"> 
-This project aims to discover the factors that influence automobile depreciation the greatest by leveraging 
+This project aims to discover the main factors that influence automobile depreciation by leveraging 
 regression algorithms and looking at their feature importance values.  This arms automobile owners, potential 
-buyers, and enthusiasts with the knowledge about which manufacturer and model retains their value the most.  
+buyers, and enthusiasts with the knowledge about which manufacturer and model retains its value the most.  
 A web application will be made available so you can get a quote on the value of your automobile in today's 
-marketplace.
+marketplace.  Model is retrained every month to avoid concept drift where the market prices vary as time passes.
 
 Furthermore, a seperate case study comparing the depreciation of the Acura TLX, the highest rated car to lease in 2019, 
-and the cost of leasing resulting in a $12,000 difference by leveraging an ensemble of strong regressors can be found 
+and the cost of leasing, which resulted in a $12,000 difference in total expenses, can be found 
 in the [leases](https://github.com/lukenew2/automobile-depreciation/tree/master/leases) directory.
 </p>
 
