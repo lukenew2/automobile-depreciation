@@ -29,7 +29,7 @@ marketplace.
 
 Furthermore, a seperate case study comparing the depreciation of the Acura TLX, the highest rated car to lease in 2019, 
 and the cost of leasing resulting in a $12,000 difference by leveraging an ensemble of strong regressors can be found 
-in the (leases)[https://github.com/lukenew2/automobile-depreciation/tree/master/leases] directory.
+in the [leases](https://github.com/lukenew2/automobile-depreciation/tree/master/leases) directory.
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
