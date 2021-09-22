@@ -1,11 +1,11 @@
 <h1 align="center"> Automobile Depreciation Analysis </h1>
 <h3 align="center"> A Comparative Study between the Expediting Factors of Automobile Depreciation </h3> 
-<p align="center"> 
-  <figure>
-    <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
-    <figcaption>"By Samuele Errico Piccarini on Upsplash"</figcaption>
-  </figure>
-</p>
+
+<figure align="center">
+  <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
+  <figcaption>By Samuele Errico Piccarini on [Upsplash](https://unsplash.com/photos/MyjVReZ5GLQ)</figcaption>
+</figure>
+
 
 <!-- TABLE OF CONTENTS -->
 <h2 id="table-of-contents"> :book: Table of Contents</h2>
