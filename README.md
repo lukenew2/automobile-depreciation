@@ -1,10 +1,9 @@
 <h1 align="center"> Automobile Depreciation Analysis </h1>
 <h3 align="center"> A Comparative Study between the Expediting Factors of Automobile Depreciation </h3> 
 
-<figure align="center">
+<p align="center">
   <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
-  <figcaption>By Samuele Errico Piccarini on [Upsplash](https://unsplash.com/photos/MyjVReZ5GLQ)</figcaption>
-</figure>
+</p>
 
 
 <!-- TABLE OF CONTENTS -->
