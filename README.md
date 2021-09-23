@@ -36,9 +36,10 @@ about which manufacturer and model retains its value the most.  A web applicatio
 a quote on the value of your automobile in today's marketplace.  Model is retrained every month to avoid concept 
 drift where the market prices change over time.
 
-Furthermore, a seperate case study comparing the depreciation of the Acura TLX, the highest rated car to lease in 2019, 
-and the cost of leasing, resulted $12,000 difference in total expenses.  The complete case study can be found  
-in the [leases](https://github.com/lukenew2/automobile-depreciation/tree/master/leases) directory.
+Furthermore, a seperate case study examines the depreciation of the Acura TLX, the highest rated car to lease in 2019, 
+and the cost of leasing.  This study showed a $12,000 difference in total expenses. If one chooses to buy the car new
+and resell it x-years later where x is the term of the lease agreement, one would save a great deal of money.
+The complete case study can be found in the [leases](https://github.com/lukenew2/automobile-depreciation/tree/master/leases) directory.
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
