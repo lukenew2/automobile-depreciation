@@ -3,8 +3,8 @@
 
 <p align="center">
   <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
-  By Samuele Piccarini on [Upsplash](https://unsplash.com/photos/MyjVReZ5GLQ).
 </p>
+<p align="center"><cite>By Samuele Errico Piccarini</cite></p>
 
 
 <!-- TABLE OF CONTENTS -->
