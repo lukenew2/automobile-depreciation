@@ -3,6 +3,7 @@
 
 <p align="center">
   <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
+  By Samuele Piccarini on [Upsplash](https://unsplash.com/photos/MyjVReZ5GLQ).
 </p>
 
 
@@ -29,10 +30,10 @@ This project aims to discover the main factors that influence automobile depreci
 regression algorithms and looking at their feature importance values.  This arms automobile owners, potential 
 buyers, and enthusiasts with the knowledge about which manufacturer and model retains its value the most.  
 A web application will be made available so you can get a quote on the value of your automobile in today's 
-marketplace.  Model is retrained every month to avoid concept drift where the market prices vary as time passes.
+marketplace.  Model is retrained every month to avoid concept drift where the market prices change over time.
 
 Furthermore, a seperate case study comparing the depreciation of the Acura TLX, the highest rated car to lease in 2019, 
-and the cost of leasing, which resulted in a $12,000 difference in total expenses, can be found 
+and the cost of leasing, resulted $12,000 difference in total expenses.  The complete case study can be found  
 in the [leases](https://github.com/lukenew2/automobile-depreciation/tree/master/leases) directory.
 </p>
 
