@@ -4,7 +4,11 @@
 <p align="center">
   <img src="images/cover_image.jpeg" alt="Car Photo" width="240px" height="240px">
 </p>
-<p align="center"><cite>By Samuele Errico Piccarini</cite></p>
+<p align="center">
+  <cite>By Samuele Errico Piccarini on 
+    <a href="https://unsplash.com/photos/MyjVReZ5GLQ">Upsplash</a>
+  </cite>
+</p>
 
 
 <!-- TABLE OF CONTENTS -->
