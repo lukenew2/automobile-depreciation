@@ -53,7 +53,7 @@ class Cities(scrapy.Spider):
 
             # Insert document into cities collection
             collection.insert_one(item)
-            
+
 # Main Driver
 if __name__=='__main__':
     # Run Scraper 

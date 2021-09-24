@@ -10,18 +10,16 @@ from truecar.items import VehicleItem
 class TrueCar(scrapy.Spider):
 
     name = 'truecar'
-    headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0'} 
     domain = 'https://www.truecar.com'
     url = 'https://www.truecar.com/used-cars-for-sale/listings/price-above-1000/location-seattle-wa/?page='
 
     def start_requests(self):
 
         # Adjust range to adjust number of pages that need scraped
-        for page in range(1, 1000):
+        for page in range(530, 600):
             next_page = self.url + str(page) + '&searchRadius=5000&sort[]=created_date_desc'
 
             yield scrapy.Request(url=next_page, 
-                                headers=self.headers, 
                                 callback=self.parse)
     
     def parse(self, res):
@@ -32,7 +30,6 @@ class TrueCar(scrapy.Spider):
         # Follow each link recursively
         for link in links:
             yield res.follow(url=self.domain + link,
-                             headers=self.headers,
                              callback=self.parse_link)
 
     def parse_link(self, res):
